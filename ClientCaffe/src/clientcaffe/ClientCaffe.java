@@ -42,7 +42,8 @@ public class ClientCaffe {
             risposta_lista = cl.richiedi_lista();
 
             String[] lista_codici = risposta_lista.split(",");
-            String[] lista_caffe = null;
+            String[] lista_caffe  = new String[100];
+            
 
             Scanner input = new Scanner(System.in);
 
@@ -54,9 +55,9 @@ public class ClientCaffe {
             int conta = 0;
 
             for (String caffe : lista_codici) {
-
-                lista_caffe[conta] = "Caffe " + conta + 1;
+                
                 conta++;
+                lista_caffe[conta] = "Caffe " + conta + 1;
 
             }
 
