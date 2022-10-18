@@ -19,6 +19,7 @@ public class ClientThread extends Thread{
         for(int i=0; i<ServerCaffe.listaCaffe.size(); i++){
             res+=ServerCaffe.listaCaffe.get(i).codice+",";
         }
+        System.out.println(res);
         return res.substring(0, res.length()-2);
     }
     
@@ -36,6 +37,7 @@ public class ClientThread extends Thread{
         if(scelta==-1)
             return "ERRORE";
         ServerCaffe.listaCaffe.get(scelta).aggiungiVoto(Integer.parseInt(comps[1]));
+        System.out.println("voto " + Integer.parseInt(comps[1]));
         return "OK";
     }
     
@@ -51,6 +53,7 @@ public class ClientThread extends Thread{
         
         if(scelta==-1)
             return "ERRORE";
+        System.out.println("media " + ServerCaffe.listaCaffe.get(scelta).media());
         return ServerCaffe.listaCaffe.get(scelta).media();
     }
 
